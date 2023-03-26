@@ -21,8 +21,7 @@
       include 'sidebar.php';
        ?>
       <div class="container mt-3 ps-5 col-10">
-        <h1>User Data Table</h1>
-        <a href="add.php" class="btn btn-success">+ Add</a>
+        <h1>Reports Data Table</h1>
         <table class="table">
           <tr>
             <th>ID</th>

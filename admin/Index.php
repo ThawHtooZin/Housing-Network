@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <title>ProTech Realstate : Home</title>
   </head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <?php include 'bootstrap.php';?>
   <body>
     <div class="container row">
       <?php
@@ -59,10 +59,25 @@
           <!-- End About Housing -->
         </div>
         <!-- End Quick Access -->
+        <br>
+        <!-- Income Rates Chart -->
+        <button data-bs-toggle="collapse" data-bs-target="#demo" class="btn btn-primary">Show The Profit / Income</button>
+        <div id="demo" class="collapse card-body">
+          <table class="table">
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <!-- End Income Rates Chart -->
       </div>
-      <!-- Income Rates Chart -->
-      
-      <!-- End Income Rates Chart -->
     </div>
   </body>
 </html>
