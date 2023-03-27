@@ -52,7 +52,7 @@
                 <p>Page about the housing that uploaded to your website</p>
               </div>
               <div class="card-footer">
-                <a href="hosung.php">view</a>
+                <a href="housing.php">view</a>
               </div>
             </div>
           </div>
