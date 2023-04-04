@@ -12,7 +12,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>ProTech Realstate : Home</title>
+    <title>ProTech Realstate : Dashboard</title>
   </head>
   <?php include 'bootstrap.php';?>
   <body>
