@@ -29,6 +29,7 @@
             <th>Owner</th>
             <th>Location</th>
             <th>Phone Number</th>
+            <th>Sale Or Rent</th>
             <th>Deposite Fee</th>
             <th>Monthly Fee</th>
             <th>House Image</th>
@@ -48,6 +49,7 @@
               <td><?php echo $datas2['username']; ?></td>
               <td><?php echo $datas['location']; ?></td>
               <td><?php echo $datas['phone_number']; ?></td>
+              <td><?php echo $datas['sor']; ?></td>
               <td><?php echo $datas['depositefee']; ?></td>
               <td><?php echo $datas['monthlyfee']; ?></td>
               <td>

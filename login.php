@@ -13,6 +13,9 @@
 </head>
 <body>
   <?php
+  include 'navbar.php';
+  ?>
+  <?php
   if($_POST){
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -24,24 +27,25 @@
         $passerror = "The Password Field Is Required";
       }
     }else{
-      $sql = "SELECT * FROM users WHERE username='$username'";
-      $auth = $conn->query($sql);
+      $stmt = $pdo->prepare("SELECT * FROM users WHERE username='$username'");
+      $stmt->execute();
+      $auth = $stmt->fetch(PDO::FETCH_ASSOC);
       if(empty($auth)){
         echo "<script>alert('Invalid Cridential');</script>";
       }else{
-        foreach ($auth as $authvalue) {
-          if($password == $authvalue['password']){
-            if($authvalue['role'] == 1){
+          if($password == $auth['password']){
+            if($auth['role'] == 1){
               header('location:admin/index.php');
-              $_SESSION['username'] = $authvalue['username'];
+              $_SESSION['username'] = $auth['username'];
+              $_SESSION['user_id'] = $auth['id'];
               $_SESSION['logged_in'] = true;
               $_SESSION['role'] = 1;
             }else{
               header('location:users/index.php');
-              $_SESSION['username'] = $authvalue['username'];
+              $_SESSION['username'] = $auth['username'];
+              $_SESSION['user_id'] = $auth['id'];
               $_SESSION['logged_in'] = true;
             }
-          }
         }
       }
     }

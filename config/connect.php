@@ -1,13 +1,16 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "housing_shop";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-?>
+define('MYSQL_USER','root');
+define('MYSQL_PASSWORD','');
+define('MYSQL_HOST','localhost');
+define('MYSQL_DATABASE', 'housing_shop');
+
+$options = array(
+  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+);
+
+$pdo = new PDO(
+  'mysql:host='.MYSQL_HOST.';dbname='.MYSQL_DATABASE,MYSQL_USER,MYSQL_PASSWORD,$options
+  )
+
+ ?>
